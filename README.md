@@ -1,6 +1,6 @@
-# IDS706-Python-Template
+# IDS706_Fall2023_Mini_Project_5_SQLite
 
-Python template repo for Fall 2023 IDS_706-Data Engineering Systems at Duke Univ. 
+ IDS706 week 5 mini project: create a Python script that interacts with a SQL database.
 
 It contains:
 
@@ -14,14 +14,27 @@ It contains:
 
 It also includes ``main.py`` and ``test_main.py`` as sample files to show the functionality of the CI pipeline.
 
-## Github Actions Demo
+## Interact with SQLite database
+To interact with SQLite database, first we need to establish a connection:
+```
+conn = sqlite3.connect("my_database.db")
+```
+Then create a cursor object to execute any operations we want. For example, we insert two records to the newly created table:
+```
+cursor = conn.cursor()
+cursor.execute(
+        """CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY, name TEXT, age INTEGER)"""
+    )
+cursor.execute("INSERT INTO users (name, age) VALUES (?, ?)", ("Alice", 30))
+cursor.execute("INSERT INTO users (name, age) VALUES (?, ?)", ("Bob", 25))
+```
+After the operations are commited, the cursor can be used to execute SQL queries:
+```
+cursor.execute("SELECT * FROM users")
+rows = cursor.fetchall()
+cursor.execute("SELECT * FROM users WHERE users.name=='Alice'")
+rows = cursor.fetchall()
+```
+The results are printed out:<br>
 
-`Github Actions` is configured to kick off workflows with Github events. Below shows some samples:
-
-![img](./demo_img/demo_make_install.png)
-
-![img](./demo_img/demo_make_test.png)
-
-![img](./demo_img/demo_make_format.png)
-
-![img](./demo_img/demo_make_lint.png)
+![query_result](demo_img/query_result.png)
