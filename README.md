@@ -1,3 +1,7 @@
+[![install](https://github.com/nogibjj/IDS706_Fall2023_Mini_Project_5_SQLite/actions/workflows/install.yml/badge.svg)](https://github.com/nogibjj/IDS706_Fall2023_Mini_Project_5_SQLite/actions/workflows/install.yml)
+[![lint](https://github.com/nogibjj/IDS706_Fall2023_Mini_Project_5_SQLite/actions/workflows/lint.yml/badge.svg)](https://github.com/nogibjj/IDS706_Fall2023_Mini_Project_5_SQLite/actions/workflows/lint.yml)
+[![format](https://github.com/nogibjj/IDS706_Fall2023_Mini_Project_5_SQLite/actions/workflows/format.yml/badge.svg)](https://github.com/nogibjj/IDS706_Fall2023_Mini_Project_5_SQLite/actions/workflows/format.yml)
+[![test](https://github.com/nogibjj/IDS706_Fall2023_Mini_Project_5_SQLite/actions/workflows/test.yml/badge.svg)](https://github.com/nogibjj/IDS706_Fall2023_Mini_Project_5_SQLite/actions/workflows/test.yml)
 # IDS706_Fall2023_Mini_Project_5_SQLite
 
  IDS706 week 5 mini project: create a Python script that interacts with a SQL database.
